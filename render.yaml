@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bdf-lab-01-server
+    runtime: node
+    plan: free
+    rootDir: lab-01
+    buildCommand: npm install
+    startCommand: node server.js
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20

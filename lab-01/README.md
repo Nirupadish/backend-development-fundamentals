@@ -9,9 +9,8 @@
 ---
 
 ## Live Link
-> **Deployment Status**: Not applicable (Local development setup running on `http://localhost:3000`).
-
----
+- **Deploy to Render**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Nirupadish/backend-development-fundamentals)
+- **Render Live URL**: `https://bdf-lab-01-server.onrender.com` *(Active upon clicking deploy)*
 
 ## How to Run
 
