@@ -16,7 +16,7 @@ This repository houses all laboratory practicals and deliverables for the **Back
 
 | Lab | Title | Directory | Status |
 | :---: | :--- | :---: | :---: |
-| **Lab 01** | Node.js and Express server | [📂 `lab-01/`](./lab-01) | **Completed** |
+| **Lab 01** | Node.js and Express server | [📂 `lab-01/`](./lab-01) | **Completed** · [🌐 Live](https://backend-development-fundamentals-x67z.onrender.com) |
 | **Lab 02** | Lab 02 | `lab-02/` | Upcoming |
 | **Lab 03** | Lab 03 | `lab-03/` | Upcoming |
 | **Lab 04** | Lab 04 | `lab-04/` | Upcoming |
