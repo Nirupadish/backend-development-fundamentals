@@ -10,7 +10,9 @@
 
 ## Live Link
 - **Deploy to Render**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Nirupadish/backend-development-fundamentals)
-- **Render Live URL**: `https://bdf-lab-01-server.onrender.com` *(Active upon clicking deploy)*
+- **Render Live URL**: [https://bdf-lab-01-server.onrender.com](https://bdf-lab-01-server.onrender.com)
+
+> **Note:** The live URL is active only after the service has been deployed on Render. Click the **Deploy to Render** button above, sign in to Render, and complete the deployment. Once deployed, the service will be reachable at the URL above (it may take ~30–60 seconds to spin up on the free plan after a period of inactivity).
 
 ## How to Run
 

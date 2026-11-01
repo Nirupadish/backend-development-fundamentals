@@ -4,8 +4,9 @@ services:
     runtime: node
     plan: free
     rootDir: lab-01
-    buildCommand: npm install
+    buildCommand: npm ci
     startCommand: node server.js
+    healthCheckPath: /
     autoDeploy: true
     envVars:
       - key: NODE_VERSION
