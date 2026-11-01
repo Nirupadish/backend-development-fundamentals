@@ -10,13 +10,18 @@
     "dev": "nodemon index.js",
     "test": "node test-endpoints.js"
   },
-  "keywords": ["express", "sqlite", "crud", "rest-api"],
+  "keywords": [
+    "express",
+    "sqlite",
+    "crud",
+    "rest-api"
+  ],
   "author": "Nirupadish Gouda",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "nodemon": "^3.0.2"
