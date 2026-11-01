@@ -9,17 +9,21 @@ app.use(express.json());
 const dbPath = path.join(__dirname, 'books.db');
 const PORT = process.env.PORT || 3000;
 let db = null;
+let server = null;
 
 // ─────────────────────────────────────────────
 // Initialize DB connection, then start server
 // ─────────────────────────────────────────────
-const initializeDBAndServer = async () => {
+const initializeDBAndServer = async (port = PORT) => {
   try {
     db = await open({ filename: dbPath, driver: sqlite3.Database });
     console.log('✅ Database connected successfully');
 
-    app.listen(PORT, () => {
-      console.log(`🚀 Server running at http://localhost:${PORT}`);
+    return new Promise((resolve) => {
+      server = app.listen(port, () => {
+        console.log(`🚀 Server running at http://localhost:${port}`);
+        resolve(server);
+      });
     });
   } catch (e) {
     console.error(`❌ DB Error: ${e.message}`);
@@ -27,7 +31,10 @@ const initializeDBAndServer = async () => {
   }
 };
 
-initializeDBAndServer();
+// Auto-run if executed directly
+if (require.main === module) {
+  initializeDBAndServer();
+}
 
 // ─────────────────────────────────────────────
 // GET / — Health check (required by Render)
@@ -109,3 +116,10 @@ app.delete('/books/:bookId/', async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+
+module.exports = {
+  app,
+  initializeDBAndServer,
+  getDb: () => db,
+  getServer: () => server
+};

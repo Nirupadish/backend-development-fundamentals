@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "setup": "node setup.js",
+    "build": "node setup.js",
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "node test-endpoints.js"
   },
   "keywords": ["express", "sqlite", "crud", "rest-api"],
   "author": "Nirupadish Gouda",
