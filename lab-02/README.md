@@ -51,11 +51,11 @@ node setup.js
 ```bash
 npm start
 ```
-*Uses nodemon — server auto-restarts on every file change.*
+*Runs `node index.js` — the production-ready start command.*
 
-Alternatively:
+Alternatively, for development with auto-restart:
 ```bash
-node index.js
+npm run dev
 ```
 
 The server will start at `http://localhost:3000/`
