@@ -1,0 +1,9 @@
+{
+  "name": "backend-development-fundamentals",
+  "version": "1.0.0",
+  "description": "Backend Development Fundamentals Course Repository",
+  "scripts": {
+    "start": "cd lab-02 && node index.js",
+    "build": "cd lab-02 && npm install && node setup.js"
+  }
+}
