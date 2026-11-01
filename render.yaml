@@ -17,9 +17,9 @@ services:
     runtime: node
     plan: free
     rootDir: lab-02
-    buildCommand: npm ci && node setup.js
+    buildCommand: npm install && node setup.js
     startCommand: node index.js
-    healthCheckPath: /books/
+    healthCheckPath: /
     autoDeploy: true
     envVars:
       - key: NODE_VERSION

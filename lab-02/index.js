@@ -30,12 +30,18 @@ const initializeDBAndServer = async () => {
 initializeDBAndServer();
 
 // ─────────────────────────────────────────────
+// GET / — Health check (required by Render)
+// ─────────────────────────────────────────────
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'Lab 02 — SQLite CRUD API is running' });
+});
+
+// ─────────────────────────────────────────────
 // GET /books/ — Retrieve all books
 // ─────────────────────────────────────────────
 app.get('/books/', async (req, res) => {
   try {
-    const query = `SELECT * FROM book;`;
-    const books = await db.all(query);
+    const books = await db.all('SELECT * FROM book;');
     res.json(books);
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -48,9 +54,7 @@ app.get('/books/', async (req, res) => {
 app.get('/books/:bookId/', async (req, res) => {
   try {
     const { bookId } = req.params;
-    const query = `SELECT * FROM book WHERE id = ?;`;
-    const book = await db.get(query, [bookId]);
-
+    const book = await db.get('SELECT * FROM book WHERE id = ?;', [bookId]);
     if (!book) {
       return res.status(404).json({ error: 'Book not found' });
     }
@@ -66,11 +70,10 @@ app.get('/books/:bookId/', async (req, res) => {
 app.post('/books/', async (req, res) => {
   try {
     const { title, author, price, pages } = req.body;
-    const query = `
-      INSERT INTO book (title, author, price, pages)
-      VALUES (?, ?, ?, ?);
-    `;
-    const result = await db.run(query, [title, author, price, pages]);
+    const result = await db.run(
+      'INSERT INTO book (title, author, price, pages) VALUES (?, ?, ?, ?);',
+      [title, author, price, pages]
+    );
     res.json({ bookId: result.lastID, message: 'Book Added Successfully' });
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -84,15 +87,10 @@ app.put('/books/:bookId/', async (req, res) => {
   try {
     const { bookId } = req.params;
     const { title, author, price, pages } = req.body;
-    const query = `
-      UPDATE book
-      SET title = ?,
-          author = ?,
-          price = ?,
-          pages = ?
-      WHERE id = ?;
-    `;
-    await db.run(query, [title, author, price, pages, bookId]);
+    await db.run(
+      'UPDATE book SET title = ?, author = ?, price = ?, pages = ? WHERE id = ?;',
+      [title, author, price, pages, bookId]
+    );
     res.json({ message: 'Book Updated Successfully' });
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -105,11 +103,9 @@ app.put('/books/:bookId/', async (req, res) => {
 app.delete('/books/:bookId/', async (req, res) => {
   try {
     const { bookId } = req.params;
-    const query = `DELETE FROM book WHERE id = ?;`;
-    await db.run(query, [bookId]);
+    await db.run('DELETE FROM book WHERE id = ?;', [bookId]);
     res.json({ message: 'Book Deleted Successfully' });
   } catch (e) {
     res.status(500).json({ error: e.message });
   }
 });
-
