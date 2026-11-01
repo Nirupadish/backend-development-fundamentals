@@ -10,9 +10,10 @@
 
 ## Live Link
 
-- **Render Live URL**: Not deployed yet — see Postman screenshots below.
+- **Deploy to Render**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Nirupadish/backend-development-fundamentals)
+- **Render Live URL**: Deploy via the button above or from your [Render Dashboard](https://dashboard.render.com).
 
-> **Note:** To deploy, push this folder to a Render Web Service with `node index.js` as the start command.
+> **Note:** The free-plan service may take ~30–60 seconds to wake up after a period of inactivity — this is normal, just refresh the page.
 
 ---
 
