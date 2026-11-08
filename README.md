@@ -18,7 +18,7 @@ This repository houses all laboratory practicals and deliverables for the **Back
 | :---: | :--- | :---: | :---: |
 | **Lab 01** | Node.js and Express server | [📂 `lab-01/`](./lab-01) | **Completed** · [🌐 Live](https://backend-development-fundamentals-x67z.onrender.com) |
 | **Lab 02** | SQLite Database and CRUD Routes | [📂 `lab-02/`](./lab-02) | **Completed** |
-| **Lab 03** | Lab 03 | `lab-03/` | Upcoming |
+| **Lab 03** | REST API, Query Parameters, Validation & Debugging | [📂 `lab-03/`](./lab-03) | **Completed** |
 | **Lab 04** | Lab 04 | `lab-04/` | Upcoming |
 | **Lab 05** | Lab 05 | `lab-05/` | Upcoming |
 | **Lab 06** | Lab 06 | `lab-06/` | Upcoming |
@@ -33,3 +33,4 @@ For full details on each lab, see the individual documentation:
 
 - [Lab 1 Documentation](./lab-01/README.md) — Node.js and Express server: setup, endpoints, status code tests, and viva answers.
 - [Lab 2 Documentation](./lab-02/README.md) — SQLite Database and CRUD Routes: setup, DB seeding, endpoints, and viva answers.
+- [Lab 3 Documentation](./lab-03/README.md) — REST API, Query Parameters, Validation & Debugging: setup, DB seeding, endpoints, debugging guide, and viva answers.

@@ -24,3 +24,16 @@ services:
     envVars:
       - key: NODE_VERSION
         value: 20
+
+  - type: web
+    name: bdf-lab-03-server
+    runtime: node
+    plan: free
+    rootDir: lab-03
+    buildCommand: npm install && node database/seed.js
+    startCommand: node src/server.js
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20

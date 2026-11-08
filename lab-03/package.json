@@ -1,0 +1,30 @@
+{
+  "name": "bdf-lab-03-rest-api",
+  "version": "1.0.0",
+  "description": "Lab 3: REST API, query parameters, validation, and debugging",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node database/seed.js",
+    "test": "node tests/test_runner.js"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "sqlite",
+    "validation",
+    "bdf"
+  ],
+  "author": "Nirupadish Gouda",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
+
