@@ -4,7 +4,18 @@ Name = Nirupadish Gouda
 Reg No. = 252U1R1169
 
 Backend Development Fundamentals (BDF) · Year II Term II · Aurora  
-Faculty: Shiva Sai Tejs
+Faculty: Shiva Sai Teja
+
+---
+
+## 🌐 Live Deployment on Render
+
+- **Deploy to Render**: [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Nirupadish/backend-development-fundamentals)
+- **Render Dashboard**: [dashboard.render.com](https://dashboard.render.com)
+- **Render Service Name**: `bdf-lab-03-server`
+- **Render Blueprint**: Configured automatically via [`render.yaml`](../render.yaml) at repo root.
+
+> **Note on Render Free Tier**: Services spin down after inactivity. On initial load, please allow 30–50 seconds for the instance to start.
 
 ---
 

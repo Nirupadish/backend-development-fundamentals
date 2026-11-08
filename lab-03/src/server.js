@@ -9,7 +9,13 @@ async function startServer() {
   try {
     // Ensure database connection and tables are ready
     console.log('Initializing database connection...');
-    await getDatabaseConnection();
+    const db = await getDatabaseConnection();
+    const countRow = await db.get('SELECT COUNT(*) AS total FROM books;');
+    if (countRow && countRow.total === 0) {
+      console.log('Database empty. Auto-seeding sample books...');
+      const { seed } = require('../database/seed');
+      await seed();
+    }
     console.log('Database initialized successfully.');
 
     const server = app.listen(PORT, () => {
